@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+.navbar-dark {
+    background-color: #9b59b6; /* Purple color */
+}
+
+.navbar[data-bs-theme=dark] {
+    background-color: #9b59b6; /* Purple color */
+}

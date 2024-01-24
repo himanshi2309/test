@@ -1,0 +1,31 @@
+<div class="col-md-6 offset-md-3">
+  <h3>Create Employee</h3>
+  <form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
+
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" class="form-control" id="firstName" [(ngModel)]="employee.firstName" name="firstName" required>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" class="form-control" id="lastName" [(ngModel)]="employee.lastName" name="lastName" required>
+    </div>
+
+    <div class="form-group">
+      <label for="emailId">Email Id</label>
+      <input type="email" class="form-control" id="emailId" [(ngModel)]="employee.emailId" name="emailId" required>
+    </div>
+
+    <!-- Updated label and select for jobTitle -->
+    <div class="form-group">
+      <label for="jobTitle">Job Title</label>
+      <select class="form-control" id="jobTitle" [(ngModel)]="employee.job.title" name="jobTitle" required>
+        <option *ngFor="let title of jobTitles" [value]="title">{{ title }}</option>
+      </select>
+    </div>
+
+    <button class="btn btn-success" type="submit" [disabled]="!employeeForm.valid">Submit</button>
+
+  </form>
+</div>
